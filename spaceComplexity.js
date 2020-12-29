@@ -12,3 +12,13 @@ function sum(arr)   {
 }
 //evaluated in O(1) space, because there are only two variables taking up
 //space: total and i.
+
+function double(arr)    {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++)    {
+        newArr.push(2 * arr[i]) //this arr is getting longer directly in proportion to the input
+    }
+    return newArr;
+}
+//this is evaluated at O(n)
+
