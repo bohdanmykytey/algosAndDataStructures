@@ -39,18 +39,40 @@ Expmlore examples
 //the interviewr told us that we are keeping track of the numbers and only lower case letters
 
 /*
-function charCount()    {
+Simplify
+
+1) Find the core difficulty in what you are trying to do
+2) Temporarily ignore the difficulty
+3) Write a simplified solution
+4) Then incorporate that difficulty back in.
+*/
+
+
+/*
+function charCount(str) {
     //make object to return at end
     //loop over string
     //return object 
 }
 */
 
-function charCount(str)    {
+function charCount(str) {
     //make object to return at end
+    let result = {};
     //loop over string, for each char.
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]
         //if the number/letter AND is a key in the object, add it to 1
+        if (result[char] > 0) {
+            result[char]++
         //if number/letter AND not add it and set value to 1
-        //if char is something other than alphanumeric dont do anything
+        } else {
+            result[char] = 1;
+        }
+    }
+    //if char is something other than alphanumeric dont do anything
     //return object 
+    return result;
 }
+
+console.log(charCount('hello'))
