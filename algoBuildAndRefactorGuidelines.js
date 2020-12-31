@@ -65,14 +65,14 @@ function charCount(str) {
         //if the number/letter AND is a key in the object, add it to 1
         if (result[char] > 0) {
             result[char]++
-        //if number/letter AND not add it and set value to 1
+            //if number/letter AND not add it and set value to 1
         } else {
             result[char] = 1;
         }
     }
     //if char is something other than alphanumeric dont do anything
     //return object 
-    return result; 
+    return result;
 }
 
 console.log(charCount('Hi there'))
@@ -88,3 +88,21 @@ Look back and Refactor
 6) Can you think of ways to refactor?
 7) How have other people solved this problem? 
 */
+
+function charCount(str) {
+    let result = {};
+    for (let char of str) {
+        char = char.toLowerCase()
+        if (/[a-z0-9]/.test(char)) {
+            if (result[char] > 0) {
+                result[char]++
+            } else {
+                result[char] = 1;
+            }
+        }
+
+    }
+    return result;
+}
+
+console.log(charCount('Hi there'))
