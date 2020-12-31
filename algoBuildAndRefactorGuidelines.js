@@ -61,7 +61,7 @@ function charCount(str) {
     let result = {};
     //loop over string, for each char.
     for (let i = 0; i < str.length; i++) {
-        let char = str[i]
+        let char = str[i].toLowerCase()
         //if the number/letter AND is a key in the object, add it to 1
         if (result[char] > 0) {
             result[char]++
@@ -72,7 +72,19 @@ function charCount(str) {
     }
     //if char is something other than alphanumeric dont do anything
     //return object 
-    return result;
+    return result; 
 }
 
-console.log(charCount('hello'))
+console.log(charCount('Hi there'))
+
+/*
+Look back and Refactor
+ 
+1) Can you check the result?
+2) Can you derive the result differently?
+3) Can you understand it at a glance?
+4) Can you use the results or methods for another problem?
+5) Can you improve the performance of your solution?
+6) Can you think of ways to refactor?
+7) How have other people solved this problem? 
+*/
