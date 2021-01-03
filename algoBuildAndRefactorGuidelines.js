@@ -11,6 +11,12 @@
 */
 
 //write a function that takes in two numbers and returns their sum
+function addTwoNums(a, b)   {
+    return a + b;
+}
+
+console.log(addTwoNums(6,2))
+
 /*
 1) Restate the problem in your own words
     - implement addition
