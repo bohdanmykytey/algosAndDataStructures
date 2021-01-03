@@ -42,7 +42,7 @@ function same(arr1, arr2) {
     return true;
 }
 
-console.log(same([1, 2, 3, 2], [9, 1, 4, 4]))
+// console.log(same([1, 2, 3, 2], [9, 1, 4, 4]))
 
 //O(n^2) becasue of the nested loop, though it works it's far from optimal performance
 //avoid nested loops when possible.
@@ -53,6 +53,7 @@ function sameRefactored(arr1, arr2) {
     if (arr1.length !== arr2.length) {
         return false
     }
+
     let frequencyCounter1 = {};
     let frequencyCounter2 = {};
 
@@ -75,4 +76,22 @@ function sameRefactored(arr1, arr2) {
     return true;
 }
 
-console.log(sameRefactored([1, 2, 3, 2], [9, 1, 4, 4]))
+// console.log(sameRefactored([1, 2, 3, 2], [9, 1, 4, 4]))
+
+
+//using frequencies to compare to strings
+
+//given 2 strings write a func that determines if the 2nd str is an anagram of the 1st
+
+function isAnagram(str1, str2)  {
+
+    if(str1.length !== str2.length) {
+        return false;
+    }
+
+    let lookUp = {};
+
+    
+}
+
+isAnagram('ass', 'sas')
