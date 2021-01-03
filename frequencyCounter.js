@@ -25,9 +25,21 @@ same([1,2,1], [4,4,9]) returns false (must be the same frequency)
 
 */
 
+//naive solution
 function same(arr1, arr2) {
     //immiditely we know that if the arrs are diff lengths the output must be false
     if (arr1.length !== arr2.length) {
         return false
     }
+    for (let i = 0; i < arr1.length; i++) {
+        let correctIndex = arr2.indexOf(arr1[i] ** 2)
+        if (correctIndex === -1) {
+            return false
+        }
+        console.log(arr2) //so we can see arr2 getting smaller as it keeps looping while true
+        arr2.splice(correctIndex, 1)
+    }
+    return true;
 }
+
+console.log(same([1, 2, 3, 2], [9, 1, 4, 4]))
