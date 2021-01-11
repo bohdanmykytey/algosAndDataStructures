@@ -80,18 +80,38 @@ function sameRefactored(arr1, arr2) {
 
 
 //using frequencies to compare to strings
-
 //given 2 strings write a func that determines if the 2nd str is an anagram of the 1st
 
-function isAnagram(str1, str2)  {
+function isAnagram(str1, str2) {
 
-    if(str1.length !== str2.length) {
+    if (str1.length !== str2.length) {
         return false;
     }
 
     let lookUp = {};
 
-    
+    for (let i = 0; i < str1.length; i++) {
+
+        let letter = str1[i]
+
+        lookUp[letter] ? lookUp[letter] += 1 : lookUp[letter] = 1;
+        // console.log(lookUp)//constructing object with rerinary statements
+
+        //once object is constructed iterate over it and compare the two strings
+        for (let j = 0; j < str2.length; j++) {
+            let letter = str2[j];
+            // console.log(letter)
+
+            // if it cant find letter or letter is = 0 it is NOT an anagram
+            if(!lookUp[letter]) {
+                return false;
+            } else {
+                lookUp[letter] -= 1;
+                // console.log(lookUp)
+            }
+        }
+    }
+    return true;
 }
 
-isAnagram('ass', 'sas')
+console.log(isAnagram('bar', 'bar'))
