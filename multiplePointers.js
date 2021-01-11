@@ -35,3 +35,4 @@ function sumZeroRefactrored(arr) {
 }
 
 console.log(sumZeroRefactrored([-4, -3, -2, -1, 0, 1, 2, 3]))
+// console.log(sumZeroRefactrored([-4, -3, -2, -1, 0, 5, 6, 7]))//undefined
