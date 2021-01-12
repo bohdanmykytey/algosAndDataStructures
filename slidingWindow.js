@@ -49,7 +49,6 @@ function maxSubArraySum(array, number) {
 
 
 //REFACTOR
-
 function maxSubArraySumRefactor(arr, num){
     let maxSum = 0;
     let tempSum = 0;
