@@ -49,7 +49,7 @@ class LinkedList {
         let node = new Node(data);
         let current;
 
-        //if empty make it head
+        //if empty => make it head
         if (!this.head) {
             this.head = node;
         } else {
@@ -74,25 +74,80 @@ class LinkedList {
 
         //if first index then set to head
         if (index === 0) {
-            this.head = new Node(data, this.head);
-            return;
+            this.insertFirst(data)
         }
 
         const node = new Node(data);
         let current, previous;
 
+        //set current to first
         current = this.head;
+        let count = 0;
+
+        while (count < index) {
+            previous = current; //node before index
+            count++;
+            current = current.next;
+        }
+
+        node.next = current;
+        previous.next = node;
+
+        this.size++;
+    }
+
+    //get at a certain index
+    getAt(index) {
+        let current = this.head;
+        let count = 0;
+
+        while (current) {
+            if (count == index) {
+                console.log(current.data)
+            }
+            count++;
+            current = current.next;
+        }
+
+        return null;
+    }
+
+    //remove at index
+    removeAt(index) {
+        if (index > 0 && index > this.size) {
+            return;
+        }
+
+        let current = this.head;
+        let previus;
+        let count = 0;
+
+        //remove first
+        if (index == 0) {
+            this.head = current.next;
+        } else {
+            while (count < index) {
+                previus = current.next;
+            }
+
+            previus.next = current.next;
+        }
+
+        this.size--
+    }
+    
+    //clear list
+    clearList() {
+        this.head = null;//class onlu knows the head, removing it (the parent node) dumps everything (it's children)
+        this.size = 0;
     }
 }
 
 
 
 
-//get at a certain index
 
-//remove at index
 
-//clear list
 
 
 
@@ -102,5 +157,11 @@ linkedList.insertFirst(100)
 linkedList.insertFirst(200)
 linkedList.insertFirst(300)
 linkedList.insertLast(400)
+linkedList.inserAt(500, 4)
 
+// linkedList.removeAt(2)
+// linkedList.getAt(10)
+linkedList.printListData()
+
+linkedList.clearList()
 linkedList.printListData()
