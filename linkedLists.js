@@ -20,3 +20,25 @@ class Node {
         this.next = next;
     }
 }
+
+class LinkedList {
+    constructor()   {
+        this.head = null;
+        this.size = 0;
+    }
+}
+
+//insert first node 
+
+//inster last node
+
+//at an index
+
+//get at a certain index
+
+//remove at index
+
+//clear list
+
+//print list data
+
