@@ -28,7 +28,7 @@ function countDownRecursively(num)  {
     }
     console.log(num);
     num--;
-    countDownRecursively(num)
+    countDownRecursively(num)//recursive func call
 }
 
 countDownRecursively(5)
