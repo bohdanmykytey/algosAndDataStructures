@@ -20,7 +20,7 @@ function factorial(num) {
 //undesrtand the base case and recursive call
 
 function factorialRecursive(num) {
-    return num === 1 ?  1 : num * factorialRecursive(num - 1)
+    return num === 1 ? 1 : num * factorialRecursive(num - 1)
 }
 
 console.log(factorialRecursive(3))
