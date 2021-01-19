@@ -1,5 +1,5 @@
 /*
-    Helper Method Recursion
+    Helper Method Recursion (uses an external data structure, in this case an array)
     Design Pattern
 
     function outer(input) {
@@ -14,7 +14,6 @@
 
         return outerScopedVariable;
     }
-
 */
 
 function collectOddValues(arr) {
@@ -37,4 +36,27 @@ function collectOddValues(arr) {
     return result;
 }
 
-console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))
+// console.log(collectOddValues([1,2,3,4,5,6,7,8,9]))
+
+
+//Same problem solved with PURE RECURSION (no external data structure, 
+//everything is encapsulated into the function)
+
+function collectOddValuesRecursively(arr) {
+    let newArr = [];
+
+    if (arr.length === 0) return newArr;
+
+    if (arr[0] % 2 !== 0) {
+        newArr.push(arr[0])
+    }
+
+    //concat onto newArr is what allows us to return
+    //the correct values, otherwise with each iteration 
+    //the newArr would epmpty. It copies the array as it
+    //meets the conditionals otherwise returns empty
+    newArr = newArr.concat(collectOddValuesRecursively(arr.slice(1)))
+    return newArr;
+}
+
+console.log(collectOddValuesRecursively([1, 2, 3, 4, 5, 6, 7, 8, 9]))
