@@ -23,8 +23,7 @@ function power(base, exponent)  {
 */
 
 function factorial(input)    {
-    if(input === 1) return 1;
-    return input * factorial(input - 1)
+    return input === 1 ? 1  : input * factorial(input - 1)
 }
 
-console.log(factorial(4))
+console.log(factorial(7))
