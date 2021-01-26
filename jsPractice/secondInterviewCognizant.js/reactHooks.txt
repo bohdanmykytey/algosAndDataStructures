@@ -1,0 +1,27 @@
+        REACT HOOKS INTERVIEW QUESTIONS
+    
+    1) What is react hooks?
+          - hooks are functions that let you hook into the state of a react application 
+            using functional components to manage state. componentDidMount() etc are no 
+            longer necessary. ALmost anything can be done now by destructuring data and 
+            using useState() and useEffect() hooks. Prior to hooks react was class based.
+
+            Hooks relies on functional programming and closures in JS.
+
+            useState() sets initial state
+            
+            useEffect() replaces getDerivedStateFromProps() componentDidUpdate() 
+            componentDidMount() componentDidUnmount() etc.
+
+            useMemo() replaces shouldComponentUpdate() which decided if you want to re-render
+            this component
+    
+    2) Tell me the rules of react hooks?
+         - only call hooks hooks at the top level
+         - DONT call hooks from regular JS functions 
+            instead => Call hooks from react function components 
+                    or Call hooks from custom hooks
+
+    3) How to debug hooks?
+         - console.log(), browser inspector, debugger statements, 
+           React Dev Tools for Chrome, useDebugValue()
