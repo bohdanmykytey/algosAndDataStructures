@@ -37,7 +37,7 @@ function factorial(input) {
 */
 
 function productOfArray(arr) {
-    return arr.reduce((a, b) => a + b, 0);
+  return arr.reduce((a, b) => a + b, 0);
 }
 
 // console.log(productOfArray([1,2,3,10]))
@@ -52,7 +52,7 @@ function productOfArray(arr) {
 */
 
 function recursiveRange(input) {
-  return input === 0 ? 0 : input + recursiveRange(input - 1)
+  return input === 0 ? 0 : input + recursiveRange(input - 1);
 }
 
 // console.log(recursiveRange(10))
@@ -61,14 +61,37 @@ function recursiveRange(input) {
     Write a function called fib that accepts a num and returns
     the Nth num in the Fibonacci sequence. 
 
-    fib(4) // 3
+    fib(1) // 1
     fib(10) // 55 
     fib(28) // 317811
     fib(35) // 9227465
 */
 
 function fib(n) {
-  return n <= 2 ? 1 : (fib(n - 1) + fib(n - 2))
+  return n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
 }
 
-console.log(fib(10))
+// console.log(fib(50));
+//work, clean code but terrible time complexity O(N^2)
+//noticable lag when getting fib(40)
+//program crashes at fib(50)
+
+//rewriting using memoization
+
+function fibMemo(n, memo) {
+  memo = memo || [];
+
+  if (memo[n]) {
+    return memo[n];
+  } else if (n <= 2) {
+    return 1;
+  } else {
+    memo[n] = fibMemo(n - 1, memo) + fibMemo(n - 2, memo);
+  }
+  return memo[n];
+}
+
+console.log(fibMemo(100));
+// O(n) time
+// no lag, the program executes instantly 
+// (at least to the human eye)even at fibMemo(100) 
