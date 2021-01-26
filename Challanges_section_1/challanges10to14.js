@@ -89,7 +89,7 @@ function fibMemo(n, memo) {
     memo[n] = fibMemo(n - 1, memo) + fibMemo(n - 2, memo);
   }
   return memo[n];
-}
+}=
 
 console.log(fibMemo(100));
 // O(n) time
