@@ -36,11 +36,8 @@ function binarySearch(arr, val) {
   //returns 0, 3 and 7 so working well
 
   while (sorted[middle] !== val && start <= end) {
-    if (val < sorted[middle]) {
-      end = middle - 1;
-    } else {
-      start = middle + 1;
-    }
+    if (val < sorted[middle]) end = middle - 1;
+    else start = middle + 1;
     middle = Math.floor((start + end) / 2);
   }
 
