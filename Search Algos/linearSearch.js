@@ -26,8 +26,9 @@
 
 //initial solution
 function linearSearch(arr, value) {
-    return arr.includes(value) ? "Found" : "Not found"
+    return arr.includes(value) ? value : "Not found";
 }
+//executes in linear time
 
 console.log(linearSearch([10, 15, 20, 25, 30], 13)); //false
 console.log(linearSearch([10, 15, 20, 25, 30], 20)); //true
