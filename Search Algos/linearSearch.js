@@ -24,8 +24,13 @@
 
 */
 
+//initial solution
 function linearSearch(arr, value) {
-    return arr.includes(value)
+    return arr.includes(value) ? "Found" : "Not found"
 }
 
-console.log(linearSearch([10, 15, 20, 25, 30], 13));
+console.log(linearSearch([10, 15, 20, 25, 30], 13)); //false
+console.log(linearSearch([10, 15, 20, 25, 30], 20)); //true
+console.log(linearSearch(["mike", "tom", "bob", "james"], "james")); //true
+
+
