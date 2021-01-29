@@ -25,6 +25,7 @@
 
 function binarySearch(arr, val) {
   //make sure the array is sorted
+  //implementing simple sorting algo
   let sorted = arr.sort((a, b) => a - b);
 
   //set start, middle and end pointers.
@@ -42,9 +43,18 @@ function binarySearch(arr, val) {
   }
 
   //making sure the start middle and end are updating
-  //   console.log(start, middle, end);
-
+  //console.log(start, middle, end);
   return sorted[middle] === val ? val : "not found"
 }
 
 console.log(binarySearch([13, 2, 9, 30, 6, 5, 15, 28], 6));
+
+/*
+    Time Complexity of Binary Search:
+
+    Average or worst case - O(log n)
+    Best Case - O(1) only happens when the first thing 
+    we check is what we're looking for
+*/
+
+
