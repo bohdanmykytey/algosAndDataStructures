@@ -39,3 +39,4 @@ function insertionSort(arr) {
 }
 
 console.log(insertionSort([2, 1, 9, 76, 4]));
+//O(n^2) time complexity UNLESS the data is nearly sorted already 

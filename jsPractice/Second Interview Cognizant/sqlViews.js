@@ -9,7 +9,7 @@
     How to create a view:
     1) Write the select query you'd like to use for the view
     2) add CREATE VIEW view_name_goes_here before the SELECT statement
-       also inluding the AS keyword
+       also including the AS keyword
 
         Example:
 

@@ -21,9 +21,15 @@ function outerFunction(outerVar) {
 const newFunction = outerFunction('outside');
 // newFunction('inner')
 
-let addto = function(input) {
-    let inner = 10;
-    return input + inner;
+
+function addTo(input)    {
+
+  let add = function(inner)   {
+      return input + inner
+  }
+
+  return add;
 }
 
-console.log(addto(6))
+let addSix = new addTo(6)
+console.log(addSix(21))
