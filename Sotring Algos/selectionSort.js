@@ -33,3 +33,7 @@ function selectionSort(arr) {
 }
 
 console.log(selectionSort([0, 2, 34, 22, 10, 19, 17]));
+//time complexity is O(n^2) - not good
+//only "better" than bubble sort when memory is an issue,
+//since it may iterate just as many times but swaps way less.
+//regardless still massively inefficient.
