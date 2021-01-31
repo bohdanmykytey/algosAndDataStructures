@@ -1,0 +1,41 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|SQL Interview Q&A|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    - Currently running PostgreSQL 12 on most enterprise apps from what I imagine, considering 
+      that 13 is still in beta.
+      
+    - No need to learn new IDE!
+        - By choosing PostgreSQL as the DBMS it's integrated GUI framework pgAdmin is maintained
+          by the people who develop the data base language itself. It's available on Win, 
+          Linux and MAC
+
+    - Simple Local Setup and Config
+        - Many traditional RDBMS's interact in preparatory ways with storage of a particular OS. 
+          They require special kernel systems and variables in the local environment to interact
+          properly with the OS. It's not efficient and time consuming.
+
+          Instead, PostgreSQL by design interacts seamlessly with OS's and storage frameworks
+
+    - Flexible Multi-Model Architecture
+        - The Ingres research project that ended up being PostgreSQL was a pioneer of the 
+          object-relational BMS or (ORDMBS - Object Relational Database Management System). In other 
+          words, its a RDB that extends to support some object oriented programming features.
+
+          Some of these OOP Features in the DB include 
+            1) Extensibility of data types
+            2) Access methods and functions
+            3) Inherence of table properties and data types
+            4) Polymorphism (with an operator) that would have different meaning w/in the same DB
+            5) Encapsulation of tables
+        
+        - When storing and retrieving data in an ORDMBS, an Object Relational Mapping Tool (ORM)
+          automatically translates between non-scalar Object values(attr and fields) && scalar 
+          relational values (ints && strs organized within tables). 
+
+        -Today all of the leading ORM tools support PostgreSQL.
+
+    - PostgreSQL lends itself well to DevOps environments, start up is frictionless, it's completely open
+      source (read: "free") even for enterprise implementation, 
+     
+      An added benefit is that PostgreSQL is readily available as a cloud service.
