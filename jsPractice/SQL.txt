@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|SQL Interview Q&A|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|SQL|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     - Currently running PostgreSQL 12 on most enterprise apps from what I imagine, considering 
@@ -7,7 +7,7 @@
       
     - No need to learn new IDE!
         - By choosing PostgreSQL as the DBMS it's integrated GUI framework pgAdmin is maintained
-          by the people who develop the data base language itself. It's available on Win, 
+          by the people who develop the DB language itself. It's available on Win, 
           Linux and MAC
 
     - Simple Local Setup and Config
